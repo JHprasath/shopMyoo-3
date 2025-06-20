@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: shopMyoo-3
+    env: java
+    plan: free
+    region: oregon
+    branch: live
+    buildCommand: "./mvnw clean package"
+    startCommand: "java -jar target/*.jar"
+    envVars:
+      - key: PORT
+        value: "8080"
+      - key: SPRING_DATASOURCE_URL
+        value: "jdbc:postgresql://<your-db-host>:5432/Cart"
+      - key: SPRING_DATASOURCE_USERNAME
+        value: "postgres"
+      - key: SPRING_DATASOURCE_PASSWORD
+        value: "Hari@2003"
