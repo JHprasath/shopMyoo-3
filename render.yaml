@@ -1,1 +1,15 @@
-./mvnw clean package
+services:
+  - type: web
+    name: shopMyoo-3
+    runtime: docker
+    plan: free
+    region: oregon
+    branch: live
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        value: "jdbc:postgresql://<your-db-host>:5432/Cart"
+      - key: SPRING_DATASOURCE_USERNAME
+        value: "postgres"
+      - key: SPRING_DATASOURCE_PASSWORD
+        value: "Hari@2003"
