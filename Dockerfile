@@ -8,4 +8,4 @@ RUN ./mvnw clean package -DskipTests
 
 EXPOSE 8080
 
-CMD ["sh", "-c", "java -jar target/*.jar"]
+CMD ["sh", "-c", "java -jar target/e-commerce-app-0.0.1-SNAPSHOT.jar"]
